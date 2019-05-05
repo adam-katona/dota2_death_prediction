@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --job-name=combine_dota        # Job name
+#SBATCH --ntasks=1                       # Run on a single CPU
+#SBATCH --mem=10gb                        # Job memory request
+#SBATCH --time=10:00:00                  # Time limit hrs:min:sec
+#SBATCH --output=combine_dota_valid.log        # Standard output and error log
+#SBATCH --account=CS-DCLABS-2019       # Project account
+#SBATCH --array=0-9 
+
+
+cd .. 
+python -c "import data_loader; data_loader.run_cluster_normalize(\"validation\")"
+
+
+

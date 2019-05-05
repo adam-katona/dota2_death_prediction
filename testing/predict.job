@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH --job-name=predict_dota        # Job name
+#SBATCH --ntasks=1                       # Run on a single CPU
+#SBATCH --mem=10gb                        # Job memory request
+#SBATCH --time=01:00:00                  # Time limit hrs:min:sec
+#SBATCH --cpus-per-task=4 
+#SBATCH --output=parse_out.log        # Standard output and error log
+#SBATCH --account=CS-DCLABS-2019       # Project account
+#SBATCH --array=0-249 
+#SBATCH --export=ALL
+
+python predict_on_testset.py
+
+

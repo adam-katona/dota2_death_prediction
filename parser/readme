@@ -1,0 +1,7 @@
+
+It is based on the opendota parser
+The full resolution life state is a bit of a hack
+
+I dont know how to build java projects, and I don't want to know.
+The way I use it is pasting the source into a clarity example project
+

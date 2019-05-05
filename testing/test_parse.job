@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#SBATCH --job-name=parse_dota        # Job name
+#SBATCH --ntasks=1                       # Run on a single CPU
+#SBATCH --mem=10gb                        # Job memory request
+#SBATCH --time=01:00:00                  # Time limit hrs:min:sec
+#SBATCH --output=parse_out.log        # Standard output and error log
+#SBATCH --account=CS-DCLABS-2019       # Project account
+#SBATCH --array=0-730 
+#SBATCH --export=ALL
+
+module load lang/Java/1.8.0_181
+export MALLOC_ARENA_MAX=4
+
+python parse_whole_match.py
+
+
+

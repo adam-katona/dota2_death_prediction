@@ -1,0 +1,22 @@
+
+{
+    "batch_size" : 256,
+    "log_at_every_x_sample" :  76800,   // this way an epoch is the same ammount of data with different batch sizes
+    "chekpoint_at_every_x_sample" : 38400000,
+    "validation_epoch_size" : 20,
+    "optimizer" : "Adam",
+    "optimizer_params" : { "lr" : 0.001},
+   // "optimizer" : "SGD",
+   // "optimizer_params" : { "lr" : 0.001, "nesterov" : true},
+    "feature_set" : "data_loader.getFeatureCorrectAll",
+    "model" : "models.SharedHeroWeightsFF",
+    "model_params" : {"shared_layer_sizes" : [100,60,20],"final_layer_sizes" : [100]},
+    "balance_data" : true,
+    "use_gpu" : false,
+    "predict_who_dies_next" : false, // false binary = 10                true catagorical = 11
+    "lable_set" : "data_loader.getLabelIndicies_die_in_5",  // type must match with predict_who_dies_next
+    "label_set_arg" : "die_in_5"
+    
+}
+
+
