@@ -481,7 +481,7 @@ def read_and_preprocess_data(game_name,sample=True):
 
     data = add_game_name_hash(data,game_name)
 
-    data = add_hero_role_features(data)
+    # data = add_hero_role_features(data)  # this was an experiment, not used in the final version
 
 
     # This is uses too much memory, this will be done for each batch during training
