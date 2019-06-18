@@ -5,6 +5,7 @@ The output of the model is a probability estimate of each player dying in the ne
 The model is described in the paper:
 Adam Katona, Ryan Spick, Victoria Hodge, Simon Demediuk, Florian Block, Anders Drachen and James Alfred Walker
 Time to Die: Death Prediction in Dota 2 using Deep Learning, (accepted) IEEE Conference on Games (CoG) 2019
+https://arxiv.org/abs/1906.03939
 
 ```
 @article{katona2019time,
